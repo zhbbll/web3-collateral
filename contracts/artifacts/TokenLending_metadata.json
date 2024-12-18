@@ -1,0 +1,397 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_rmb",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "loanAmount",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "collateralAmount",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "loanTime",
+						"type": "string"
+					}
+				],
+				"name": "CollateralDeposited",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "loanAmount",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "collateralAmount",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "repayTime",
+						"type": "string"
+					}
+				],
+				"name": "CollateralWithdrawn",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "COLLATERAL_RATE",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "MAXLOANNUM",
+				"outputs": [
+					{
+						"internalType": "uint8",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "admin",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "collateralStatus",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "loanTokenAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "loanAmount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "collateralTokenAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "collateralAmount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "collateralRate",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "loanTime",
+						"type": "string"
+					},
+					{
+						"internalType": "bool",
+						"name": "isFinish",
+						"type": "bool"
+					},
+					{
+						"internalType": "string",
+						"name": "repayTime",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_loanTime",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "_collateralToken",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "tokenAmount",
+						"type": "uint256"
+					}
+				],
+				"name": "depositCollateral",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					}
+				],
+				"name": "getLoanDetails",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "loanTokenAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "loanAmount",
+								"type": "uint256"
+							},
+							{
+								"internalType": "address",
+								"name": "collateralTokenAddress",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "collateralAmount",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "collateralRate",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "loanTime",
+								"type": "string"
+							},
+							{
+								"internalType": "bool",
+								"name": "isFinish",
+								"type": "bool"
+							},
+							{
+								"internalType": "string",
+								"name": "repayTime",
+								"type": "string"
+							}
+						],
+						"internalType": "struct TokenLending.Collateral[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "goldAmount",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "rmb",
+				"outputs": [
+					{
+						"internalType": "contract IRMB",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "rmbAddress",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "rmbAmount",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_repayTime",
+						"type": "string"
+					},
+					{
+						"internalType": "uint8[]",
+						"name": "_index",
+						"type": "uint8[]"
+					}
+				],
+				"name": "withdrawCollateral",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"depositCollateral(string,address,uint256)": {
+					"details": "存入抵押品并借款"
+				},
+				"getLoanDetails(address)": {
+					"details": "获取用户的借贷详情"
+				},
+				"withdrawCollateral(string,uint8[])": {
+					"details": "归还借款并提取抵押品"
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"proj/demo.sol": "TokenLending"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"proj/GOLDToken.sol": {
+			"keccak256": "0x08a35c8b63f8fa051d4e5c400cd163f3707decd17c656562e18c6ab307979ef3",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://cf2689559b3ed273fccc06f9bf3fd8eb4c2684bc6857030c301fc14c994a00ea",
+				"dweb:/ipfs/QmVacXkNUVwyS3d3Xmt2pckdXNaoqdnfnyQLzrD2H4qgKG"
+			]
+		},
+		"proj/RMBToken.sol": {
+			"keccak256": "0x4f30fe1d3fb62631dad51f2562999f6be078a0d90a94ecfbaa5b5307e521bd16",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://9085d3b098edd7b6bbbc8bf2c04f553e80b425f03baaec3f05b8812bced27171",
+				"dweb:/ipfs/Qmdv1ekgPTqbATmGYQyYSGRGWt4Lk5GrWGnPCDAqJnZKAy"
+			]
+		},
+		"proj/demo.sol": {
+			"keccak256": "0xb5d6dcf69f2b55435f52755977ca7bff28152c9ba53fe4fc27070274ed44f7e0",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://ae03adbaf89eb6003e0026979cccb1f275e67128f4935088337964492cc33ec4",
+				"dweb:/ipfs/QmZVF2nQoUN5HFjmAJxEU3LnGvhzeqtTydhDZMwMhGLKV9"
+			]
+		}
+	},
+	"version": 1
+}

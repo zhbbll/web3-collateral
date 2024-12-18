@@ -1,0 +1,100 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "COLLATERAL_RATE",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "tokenAmount",
+						"type": "uint256"
+					}
+				],
+				"name": "depositCollateral",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "user",
+						"type": "address"
+					}
+				],
+				"name": "getLoanDetails",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "withdrawCollateral",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"proj/demo.sol": "Token"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"proj/RMBToken.sol": {
+			"keccak256": "0x06453c9c56d527177f202ff8e8324a1339d6650844a08a60bc9ff7f2607982b0",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://5e8e0fe9d0a04efec3527fc1d63f34cd71379f62ad73cdcfb6dbfb6164ef5b6f",
+				"dweb:/ipfs/QmbuWue9oWFmqtn2bLuLBFJbPdeb1N6tg846GLtLGJMuFa"
+			]
+		},
+		"proj/demo.sol": {
+			"keccak256": "0x957ec4d16d42b34a452b22ffc77a78cd821cfee6b9e7404f303a079d5d06c5eb",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://0d5637fc29ccb17054f430356e027adec47befbd8c997e66eaecac4acb13fa52",
+				"dweb:/ipfs/QmUkmRt5MfWrnTzgKuooZhKNNhQCVB31duawPyjPn531kh"
+			]
+		}
+	},
+	"version": 1
+}

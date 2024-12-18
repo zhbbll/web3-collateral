@@ -1,0 +1,45 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"proj/demo.sol": "Mortgate"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"proj/demo.sol": {
+			"keccak256": "0x4e28401f9e8dc828f828822fe287cdc1357465fea05d19c0e88ad622edf8f84b",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://22d9aa2e19fe7d0e12602999890c3b9ab6917919e1b044a9e232934cf53a74cf",
+				"dweb:/ipfs/QmZXLyi85yWvvAegA7EUD5B2X1cgSMHi26WRJqQp5ohSUm"
+			]
+		}
+	},
+	"version": 1
+}

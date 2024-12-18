@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Token Lending DApp</title>
+    <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js/dist/web3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@metamask/detect-provider"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
+    <style src="./css/head.css"></style>
+</head>
+<body>
+    <div class="head">
+        <h1>Token Lending DApp</h1>
+        <div>
+            <p id="address"></p>
+            <button id="connectWallet" onclick="connectWallet()">Connect Wallet</button><br><br>
+        </div>
+        
+    </div>
+    
+    
+    
+     
+
+    <div>
+        <h3>Deposit Collateral</h3>
+        <input type="text" id="depositAmount" placeholder="Collateral amount">
+        <button id="depositCollateral" onclick="depositCollateral()">Deposit</button>
+    </div><br>
+
+    <div>
+        <h3>Get Loan Details</h3>
+        <button id="getLoanDetails" onclick="getLoanDetails()">Get Details</button>
+        <pre id="loanDetails"></pre>
+    </div><br>
+
+    <div>
+        <h3>Withdraw Collateral</h3>
+        <input type="text" id="withdrawIndexes" placeholder="Indexes to withdraw (comma separated)">
+        <button id="withdrawCollateral">Withdraw</button>
+    </div><br>
+    
+    <script src="./js/walletConnection.js"></script>
+    <script src="./js/ABI.js"></script>
+    <script src="./js/caller.js"></script>
+    <script src="./js/config.js"></script>
+    <script src="./js/tools.js"></script>
+
+</body>
+</html>
